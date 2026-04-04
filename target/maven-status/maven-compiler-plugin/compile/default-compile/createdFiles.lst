@@ -1,0 +1,10 @@
+com\conversion\servlets\CheckFileServlet.class
+com\conversion\servlets\DownloadServlet.class
+com\conversion\services\WordToPdfConverter.class
+com\conversion\servlets\UploadServlet.class
+com\mycompany\mavenproject1\JakartaRestConfiguration.class
+com\conversion\servlets\ConversionServlet.class
+com\conversion\servlets\PreviewServlet.class
+com\conversion\services\PdfToWordConverter.class
+com\mycompany\mavenproject1\resources\JakartaEE10Resource.class
+com\conversion\services\PdfToExcelConverter.class
