@@ -512,37 +512,37 @@
             }, 1000);
         }
         
-        // Fonctions de partage
-        function shareWhatsApp() {
-            const fileName = convertedFileName;
-            const downloadUrl = window.location.origin + 
-                               '/DocumentConverter/download?file=' + 
-                               encodeURIComponent(fileName);
-            const text = '📄 Document converti : ' + fileName + 
-                        '\n\n📥 Télécharger : ' + downloadUrl + 
-                        '\n\n🔗 Converti avec Document Converter';
-            
-            const url = 'https://wa.me/?text=' + encodeURIComponent(text);
-            window.open(url, '_blank');
-            
-            showToast('WhatsApp ouvert pour le partage !', 'success');
-        }
-        
-        function shareTelegram() {
-            const fileName = convertedFileName;
-            const downloadUrl = window.location.origin + 
-                               '/DocumentConverter/download?file=' + 
-                               encodeURIComponent(fileName);
-            const text = '📄 Document converti : ' + fileName + 
-                        '\n\n📥 Télécharger : ' + downloadUrl;
-            
-            const url = 'https://t.me/share/url?url=' + 
-                       encodeURIComponent(downloadUrl) + 
-                       '&text=' + encodeURIComponent(text);
-            window.open(url, '_blank');
-            
-            showToast('Telegram ouvert pour le partage !', 'info');
-        }
+      // Fonctions de partage - VERSION CORRIGÉE
+function shareWhatsApp() {
+    const fileName = convertedFileName;
+    const downloadUrl = window.location.origin + 
+                       '/download?file=' +   // PLUS DE /DocumentConverter
+                       encodeURIComponent(fileName);
+    const text = '📄 Document converti : ' + fileName + 
+                '\n\n📥 Télécharger : ' + downloadUrl + 
+                '\n\n🔗 Converti avec Document Converter';
+    
+    const url = 'https://wa.me/?text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+    
+    showToast('WhatsApp ouvert pour le partage !', 'success');
+}
+
+function shareTelegram() {
+    const fileName = convertedFileName;
+    const downloadUrl = window.location.origin + 
+                       '/download?file=' +   // PLUS DE /DocumentConverter
+                       encodeURIComponent(fileName);
+    const text = '📄 Document converti : ' + fileName + 
+                '\n\n📥 Télécharger : ' + downloadUrl;
+    
+    const url = 'https://t.me/share/url?url=' + 
+               encodeURIComponent(downloadUrl) + 
+               '&text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+    
+    showToast('Telegram ouvert pour le partage !', 'info');
+}
         
         // Fonctions utilitaires
         function showLoading(message) {
